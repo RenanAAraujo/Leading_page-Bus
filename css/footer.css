@@ -1,0 +1,73 @@
+
+/* RODAPÉ */
+.footer {
+  width: 100%;
+  background-color: #005BAC;
+  color: white;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.footer-logo img {
+  width: 120px;
+}
+.footer-info,
+.footer-links,
+.footer-social {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+.footer-info h4,
+.footer-links h4,
+.footer-social h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-links li a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+.footer-links li a:hover {
+  color: #a2ffb5;
+}
+.footer-social a {
+  margin-right: 12px;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+.footer-social a:hover {
+  color: #a2ffb5;
+  transform: scale(1.2);
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #ccc;
+}

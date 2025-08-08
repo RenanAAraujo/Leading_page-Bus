@@ -1,0 +1,259 @@
+
+/*  TURISMO */
+
+.sobre-viagens {
+  background-color: #f0f8f4;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.topo-sobre h1 {
+  color: #005BAC;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.topo-sobre h2 {
+  color: #000000;
+  font-size: 2.0rem;
+  margin-bottom: 3rem;
+}
+
+.subtitulo {
+  font-size: 30px;
+}
+
+.conteudo-sobre {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bloco {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.bloco h3 {
+  color: #005BAC;
+  margin-bottom: 1rem;
+}
+
+.bloco p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.bloco ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bloco ul li {
+  margin-bottom: 0.75rem;
+  color: #005BAC;
+  font-weight: 500;
+}
+
+.imagem-centro {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-centro img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botões */
+.btn-sobre {
+  background-color: #005BAC;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-sobre:hover {
+  background-color: #FFB800;
+}
+
+.btn-contato-fretamento {
+  display: inline-block;
+  background-color: #005BAC;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+/* TURISMO - GALERIA */
+
+
+.galeria-turismo {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.galeria-turismo h2 {
+  font-size: 2.5rem;
+  color: #005BAC;
+  margin-bottom: 30px;
+}
+
+.galeria-turismo {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.galeria-turismo h2 {
+  font-size: 2.5rem;
+  color: #005BAC;
+  margin-bottom: 30px;
+}
+
+.galeria-pinterest {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  column-count: 5; /* Antes estava 4 */
+  column-gap: 15px;
+}
+
+.galeria-pinterest img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeria-pinterest img:hover {
+  transform: scale(1.03);
+}
+@media (min-width: 1200px) {
+  .galeria-pinterest {
+    column-count: 5; /* Aumenta para 5 colunas em telas grandes */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .galeria-pinterest {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .galeria-pinterest {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria-pinterest {
+    column-count: 1;
+  }
+}
+
+
+/*  ZOOM NAS IMAGENS */
+/* Estado inicial: fora da tela à esquerda e invisível */
+.animar-esquerda {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
+}
+
+/* Estado final: visível e centralizado */
+.animar-esquerda.visivel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Modal base */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-conteudo {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+.fechar-modal-veiculos {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navegacao {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.navegacao span {
+  cursor: pointer;
+  font-size: 50px;
+  color: white;
+  padding: 10px 20px;
+  user-select: none;
+}
+
+.navegacao span:hover {
+  color: #a2ffb5;
+}
+
+
+.modal-close-btn-cars {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}

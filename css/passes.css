@@ -1,0 +1,111 @@
+VENDA DE PASSES
+.passes {
+  background-color: #f0f8f4;
+  width: 100%;
+  padding: 60px 20px; /* Padding menor para evitar estouro */
+  box-sizing: border-box; /* Impede o conteúdo de ultrapassar a tela */
+}
+
+.passes h1 {
+  color: #005BAC;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.passes-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap; /* Permite quebra de linha no mobile */
+}
+
+.comprar {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.overlay {
+  padding: 3rem;
+  color: #000;
+  flex: 1 1 300px; /* Permite flexibilidade */
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.overlay h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.overlay p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay button {
+  background-color: #005BAC;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.overlay button:hover {
+  background-color: #FFB800;
+}
+
+.img-container {
+  flex: 1 1 300px; /* Responsividade garantida */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.comprar_passe_red {
+  all: unset;
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+  .passes-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+
+  .overlay {
+    padding: 1.5rem;
+  }
+
+  .passes h1 {
+    font-size: 2.5rem;
+  }
+
+  .overlay button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .img-container {
+    margin-top: 20px;
+  }
+}

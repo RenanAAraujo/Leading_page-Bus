@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%; /* Evita zoom automático em iOS */
+}
+
+html {
+  font-size: 16px; /* Tamanho base para cálculo em rem */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para os dados da compra */
+.dados-compra {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.dado-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.dado-item:last-child {
+  border-bottom: none;
+}
+
+.dado-item.destaque {
+  background-color: #e5f6ed;
+  margin: 0 -1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.dado-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.dado-valor {
+  color: #212529;
+  font-weight: 500;
+}
+
+/* Seção de pagamento */
+.secao-pagamento {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.secao-pagamento h3 {
+  color: #005BAC;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pix-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pix-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pix-label {
+  font-weight: 600;
+  color: #495057;
+  min-width: 120px;
+}
+.pix-valor-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pix-valor {
+  flex: 1;
+  color: #212529;
+  word-break: break-all;
+}
+
+.btn-copiar {
+  background-color: #005BAC;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn-copiar:hover {
+  background-color: #FFB800;
+}
+/* Container principal ajustado */
+.main-container {
+  width: 100%;
+  padding: 1rem;
+  flex: 1;
+}
+
+.form-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* Seção do comprovante */
+.secao-comprovante {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.secao-comprovante h3 {
+  color: #005BAC;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Rodapé */
+.acoes-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-cancelar {
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn-cancelar:hover {
+  color: #c82333;
+  text-decoration: underline;
+}
+
+/* Ícones */
+.fas, .far, .fab {
+  font-size: 1.1em;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+    background-color: #005BAC;
+
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-whatsapp:hover {
+  background-color: #FFB800;
+   transform: translateY(-2px);
+}
+
+/* Ajustes de tipografia para mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Reduz ligeiramente o tamanho base */
+  }
+
+  .form-card {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
+  /* Sistema de grid otimizado */
+  .dados-grid, .pix-grid {
+    gap: 0.75rem;
+  }
+
+  .dado-item, .pix-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+  }
+
+  .dado-label, .pix-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .dado-valor, .pix-valor {
+    font-size: 1rem;
+  }
+
+  /* Botões ajustados */
+  .btn-whatsapp, .btn-copiar {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Espaçamentos reduzidos */
+  .divisoria {
+    margin: 1rem 0;
+  }
+}
+
+/* Garante legibilidade mínima */
+@media (max-width: 360px) {
+  html {
+    font-size: 13px; /* Tamanho mínimo legível */
+  }
+
+  .form-card {
+    padding: 0.75rem;
+  }
+
+  /* Força quebra de texto longos */
+  .pix-valor, .dado-valor {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}

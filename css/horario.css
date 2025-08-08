@@ -1,0 +1,185 @@
+
+/* HORARIOS */
+
+.horario_titulo {
+  text-align: center;
+}
+
+.horario_titulo h2 {
+  font-size: 2.5rem;
+  color: #005BAC;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.horario_titulo::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #005BAC;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+ .explicacao {
+
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 0.5rem;
+}
+
+.grade-horario {
+  background-color: #f0f8f4;
+}
+
+.card-cidade {
+  background: #f0f8f4;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card-cidade:hover {
+  transform: scale(1.03);
+}
+
+.card-cidade img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.grid-cidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card-cidade {
+  background: #f0f8f4;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card-cidade:hover {
+  transform: scale(1.03);
+}
+
+.card-cidade img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Modal de imagem responsivo com navegação */
+.modal-imagem {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  padding-top: 80px; /* Espaço de respiro no topo */
+}
+
+.modal-conteudo {
+  display: block;
+  margin: 100px auto; /* Aumente o valor do top para descer a imagem */
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.8); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+.fechar-modal {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s;
+}
+
+.fechar-modal:hover {
+  color: #a2ffb5;
+}
+
+
+.navegacao {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.navegacao span {
+  cursor: pointer;
+  font-size: 50px;
+  color: white;
+  padding: 10px 20px;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.navegacao span:hover {
+  color: #a2ffb5;
+}
+
+@media (max-width: 768px) {
+  .modal-conteudo {
+    max-width: 95%;
+    max-height: 70%;
+  }
+
+  .navegacao span {
+    font-size: 40px;
+    padding: 8px 16px;
+  }
+}
+
+
+/* HORARIOS */
+
+/* Estado inicial: escondido e deslocado para cima */
+.slide-top {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.8s ease;
+}
+
+/* Estado final: visível e na posição original */
+.slide-top.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}

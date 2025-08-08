@@ -1,0 +1,179 @@
+:root {
+  --primary-color: #005BAC;
+  --primary-hover: #FFB800;
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+  --text-light: #6c757d;
+  --border-color: #ddd;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 91, 172, 0.1);
+}
+
+button, .btn-whatsapp, .btn-cancelar {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-whatsapp {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-cancelar {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-cancelar:hover {
+  background-color: rgba(0, 91, 172, 0.1);
+}
+
+#valor_total {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* Classes utilitárias */
+.hidden {
+  display: none !important;
+}
+
+/* Estilos para containers condicionais */
+#entrega-container, #local-entrega-container, #data-entrega-container, #quantidade-container {
+  transition: all 0.3s ease;
+}
+
+/* Mensagens de feedback */
+.mensagem {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.mensagem.sucesso {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--success-color);
+  border-left: 4px solid var(--success-color);
+}
+
+.mensagem.erro {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--error-color);
+  border-left: 4px solid var(--error-color);
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-container {
+  animation: fadeIn 0.5s ease-out;
+}

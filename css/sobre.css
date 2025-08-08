@@ -1,0 +1,246 @@
+
+/* SOBRE A EMPRESA */
+.sobre-empresa {
+  background-color: #f0f8f4;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.topo-sobre h1 {
+  color: #005BAC;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.topo-sobre h2 {
+  color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.subtitulo {
+  font-size: 30px;
+}
+
+.conteudo-sobre {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bloco {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.bloco h3 {
+  color: #005BAC;
+  margin-bottom: 1rem;
+}
+
+.bloco p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.bloco ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bloco ul li {
+  margin-bottom: 0.75rem;
+  color: #005BAC;
+  font-weight: 500;
+}
+
+.imagem-centro {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-centro img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botões */
+.btn-sobre {
+  background-color: #005BAC;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-sobre:hover {
+  background-color: #246645;
+}
+
+/* Estado inicial: fora da tela à esquerda e invisível */
+.animar-esquerda {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
+}
+
+/* Estado final: visível e centralizado */
+.animar-esquerda.visivel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* CARDS DOS DONOS */
+/* .cards-donos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.card-dono {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-dono:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(43, 124, 84, 0.3);
+}
+
+.card-dono img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.card-dono h4 {
+  color: #005BAC;
+  margin-bottom: 0.5rem;
+}
+
+.card-dono p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+
+} */
+
+
+/*  SOBRE A EMPRESA */
+
+
+/* Estilos Específicos do Modal - Não afeta outros elementos */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: flex-start; /* Alterado de center para flex-start */
+  z-index: 1000;
+  overflow-y: auto; /* Permite scroll no overlay se necessário */
+  padding: 20px 0; /* Espaço nas extremidades */
+}
+
+.modal-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+  max-height: 90vh; /* Altura máxima de 90% da viewport */
+  overflow-y: auto; /* Scroll interno para conteúdo longo */
+  margin: auto; /* Centraliza verticalmente */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Melhorias para mobile */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px 0;
+    align-items: flex-start; /* Alinha ao topo em mobile */
+  }
+  
+  .modal-container {
+    width: 95%;
+    padding: 1.5rem;
+    max-height: 85vh; /* Um pouco menos que a tela */
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-container {
+    padding: 1.2rem;
+    border-radius: 6px;
+  }
+  
+  .modal-close-btn {
+    top: 5px;
+    right: 5px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Estilo do conteúdo interno */
+.modal-content {
+  padding-right: 10px; /* Evita que o texto cole na barra de scroll */
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #005BAC;
+}
+
+.modal-content p, .modal-content ul {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.modal-content ul {
+  padding-left: 1.5rem;
+}
+
+/* Barra de scroll personalizada (opcional) */
+.modal-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background-color: rgba(43, 124, 84, 0.5);
+  border-radius: 3px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}

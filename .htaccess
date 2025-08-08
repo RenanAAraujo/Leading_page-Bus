@@ -1,0 +1,24 @@
+
+# Ativar o módulo de reescrita do Apache
+RewriteEngine On
+
+# Defina a base do projeto conforme o nome da pasta
+RewriteBase /LEADING_PAGE_BONANZA/
+
+# Página inicial padrão
+DirectoryIndex index.php index.html
+
+# Remover extensão .php das URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L]
+
+# Desativar listagem de pastas
+Options -Indexes
+
+# Forçar HTTPS (opcional - descomente se quiser)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Página de erro personalizada (opcional)
+# ErrorDocument 404 /404.html

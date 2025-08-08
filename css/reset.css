@@ -1,0 +1,18 @@
+body {
+  font-family: 'Poppins', sans-serif;
+    margin: 0;
+  padding: 0;
+    overflow-x: hidden;
+    background-color: #f0f8f4;
+      /* max-width: 100%; */
+  overflow-x: hidden;
+
+}
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* Impede rolagem lateral */
+}

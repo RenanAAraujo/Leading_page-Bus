@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Compra de Passes - Bonanza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/leading_page_bonanza/css/compra_passes.css?t=<?php echo time(); ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="/leading_page_bonanza/js/carousel.js " defer></script>
+
+</head>
+<body>
+  <div class="form-container">
+    <h2>Compra de Passes</h2>
+    <form action="processa_compra.php" method="POST" id="form-compra">
+      <label for="nome">Nome completo:</label>
+      <input type="text" name="nome" id="nome" placeholder="Escreva o nome para entrega" required pattern="[A-Za-zÀ-ÿ\s]{3,}" maxlength="100">
+
+
+      <label for="cidade">Cidade:</label>
+      <select name="cidade" id="cidade" required>
+        <option value="">Selecione a cidade</option>
+        <option value="Serra do Vale">Serra do Vale</option>
+        <option value="Águas de Aurora">Águas de Aurora</option>
+        <option value="Estudante">Estudante (Exclusivo Águas de Aurora)</option>
+        <option value="Vale Encantado">Vale Encantado</option>
+      </select>
+<div id="data-entrega-container">
+
+<label for="data_entrega">Data da entrega:</label>
+<input type="date" name="data_entrega" id="data_entrega" min="<?= date('Y-m-d') ?>" required>
+</div>
+      <div id="entrega-container" class="hidden">
+        <label for="horario_entrega">Horário de entrega:</label>
+        <input type="time" name="horario_entrega" id="horario_entrega">
+      </div>
+<div id="local-entrega-container" class="hidden">
+  <label for="local_entrega">Local de entrega:</label>
+  <select name="local_entrega" id="local_entrega">
+    <option value="">Selecione o local</option>
+    <option value="Garagem">Garagem</option>
+    <option value="Guichê">Guichê</option>
+  </select>
+</div>
+<div id="quantidade-container">
+      <label for="quantidade">Quantidade de passes:</label>
+      <input type="number" name="quantidade" id="quantidade" min="1" max="300" required>
+      </div>
+
+      <input type="hidden" name="valor_final" id="valor_final">
+      <p id="valor_total">Valor total: R$ 0,00</p>
+
+     
+<button type="submit" class="finalizarCompra" id="finalizarCompra"><i class="fas fa-cart-plus" style="color: #ffffff; font-size: 24px; margin-right: 10px;"></i>Finalizar Compra</button>
+
+<!-- Novo botão WhatsApp, inicialmente oculto -->
+<a    id="contatoWhats"
+   class="btn-whatsapp hidden"
+   target="_blank" href="https://wa.me/55XXXXXXXXX?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20passes%20para%20São%20Lourenço."
+>
+   Entre em Contato
+</a>
+
+<br>
+<a class="btn-cancelar " href="/leading_page_onibus/index.php">Cancelar compra</a>
+
+    </form>
+  </div>
+
+</body>
+</html>
