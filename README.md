@@ -1,8 +1,8 @@
 
-# 🚍 Bonanza Transportes - Site Institucional e Sistema de Compra de Passes
+# 🚍 Viação ViaNova - Site Institucional e Sistema de Compra de Passes
 
 ## 📄 Descrição do Projeto
-O site da **Bonanza Transportes** é uma landing page com funcionalidades integradas para apresentar:
+O site da **Viação ViaNova** é uma landing page com funcionalidades integradas para apresentar:
 - Horários de transporte
 - Frota de veículos
 - Compra de passes online com geração automática de QR Code Pix
@@ -14,7 +14,7 @@ Este projeto proporciona uma experiência rápida e intuitiva para o usuário, c
 ## 📂 Estrutura de Pastas
 
 ```
-LEADING_PAGE_BONANZA/
+LEADING_PAGE_ONIBUS/
 │
 ├── css/                  # Estilos do site
 │   ├── compra_passes.css
@@ -65,8 +65,8 @@ LEADING_PAGE_BONANZA/
 - ✅ Compra de passes por cidade, quantidade e preço calculado automatizado
 - ✅ Seleção de dados via calendário (impede datas passadas)
 - ✅ Campos dinâmicos no formulário:
-  - Horário de entrega obrigatório para **Piranguçu**
-  - Local de entrega obrigatório (Garagem/Guichê) para **Piranguinho** e **Santa Bárbara**
+  - Horário de entrega obrigatório para **Águas de Aurora**
+  - Local de entrega obrigatório (Garagem/Guichê) para **Vale Encantado**
 - ✅ Integração Pix com geração automática de código Copia e Cola
 - ✅ Geração de TxID único para cada compra
 - ✅ Integração com WhatsApp para meio de comprovante
@@ -77,8 +77,8 @@ LEADING_PAGE_BONANZA/
 ## ✅ Validações do Sistema
 
 - A **dados de entrega** não pode ser anterior aos dados atuais.
-- Ó campo **Horário de entrega** é obrigatório apenas para uma cidade **Piranguçu**.
-- Ó campo **Local de entrega (Garagem ou Guichê)** é obrigatório para as cidades **Piranguinho** e **Santa Bárbara**.
+- Ó campo **Horário de entrega** é obrigatório apenas para uma cidade **Águas de Aurora**.
+- Ó campo **Local de entrega (Garagem ou Guichê)** é obrigatório para as cidades **Vale Encantado**.
 - O valor total é calculado automatizado conformar uma cidade e uma quantidade de passes.
 
 ## ⁇ ️ Como Executar o Projeto
